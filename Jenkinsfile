@@ -1,27 +1,28 @@
 pipeline{
-    agent any 
+    agent any
     stages{
-        stage("Compiling"){
-            steps{
-                echo "========executing A========"
+        stage("Build"){          
+           steps{
+               echo "build is executing"
+           }
             }
-        stage("Building"){
-            steps{
-                echo "Executing building phase"
-            }
-        }   
-        stage("Testing"){
-            steps{
-                echo "Executing the testing phase"
-            }
+        stage("Test"){
+           steps{
+               echo "Test is executing"
+           }
         }
-        stage("deploying"){
-            steps{
-                echo "Executing the deploying phase"
-            }
+        stage("QA"){
+           steps{
+               echo "QA is executing"
+           }
         }
+        stage("Monitor"){
+           steps{
+               echo "Monitor is executing"
+           }
         }
-    }
+
+        }
     
    
 }
