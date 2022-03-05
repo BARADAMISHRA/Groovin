@@ -1,50 +1,27 @@
 pipeline{
-    agent{
-        label "node"
-    }
+    agent any 
     stages{
-        stage("compiling"){
+        stage("Compiling"){
             steps{
-                step{
-                    echo " this is 1st time compiling"
-                }
-               
+                echo "========executing A========"
             }
-        }
         stage("Building"){
             steps{
-                step{
-                    echo "this is 1st building phase"
-                }
-               
+                echo "Executing building phase"
             }
-        }
+        }   
         stage("Testing"){
             steps{
-                step{
-                    echo " this is my 1st testing phase"
-                }
-               
+                echo "Executing the testing phase"
             }
         }
         stage("deploying"){
             steps{
-                step{
-                    echo "this is 1st stage of deploying"
-                }
-               
+                echo "Executing the deploying phase"
             }
         }
-    }
-    post{
-        always{
-            echo "========always========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
-        failure{
-            echo "========pipeline execution failed========"
         }
     }
+    
+   
 }
