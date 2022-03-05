@@ -1,49 +1,28 @@
 pipeline{
     agent any
     stages{
-        stage("compile"){
-            steps{
-                    echo "Compiling A========"
-                }
-                
-                
+        stage("Build"){          
+           steps{
+               echo "build is executing"
+           }
             }
-            
-       }
-        stage("Building"){
-            steps{
-                    echo "Building a code"
-                }
-               
-                
-            }
+        stage("Test"){
+           steps{
+               echo "Test is executing"
+           }
         }
-        stage("Testing"){
-            steps{
-                  echo "Testing a code"
-                }
-                
-               
-            }
-        
-        stage("Deploying"){
-            steps{
-                
-                   echo "Deploying a code"
-                
-              
-            }
+        stage("QA"){
+           steps{
+               echo "QA is executing"
+           }
+        }
+        stage("Monitor"){
+           steps{
+               echo "Monitor is executing"
+           }
         }
 
+        }
     
-    post{
-        always{
-            echo "========always========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
-        failure{
-            echo "========pipeline execution failed========"
-        }
-    }
+   
+}
