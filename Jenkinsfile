@@ -8,6 +8,13 @@ pipeline{
             }
             
         }
+        parameters {
+          string(name: 'environment', defaultValue: 'DEV', description: 'Deployment environment?')
+          booleanParam(defaultValue: true, description: 'Skip Tests?', name: 'skiptest')
+          text(defaultValue: "Multiple lines text \n another line", description: "Multi-line", name: "multiline")
+          choice(choices: 'AWS,AZURE,GCP', description: 'Which cloud platform?', name: 'cloudplatform')
+          password(defaultValue: "Password", description: "enter test account password", name: "testpwd")
+  }
     }
     post{
         always{
