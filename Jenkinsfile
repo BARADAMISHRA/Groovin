@@ -1,6 +1,6 @@
-pipeline {
-  agent any
-  parameters {
+pipeline{
+    agent any
+    parameters {
     choice(
         name: 'myParameter',
         choices: "Option1\nOption2",
