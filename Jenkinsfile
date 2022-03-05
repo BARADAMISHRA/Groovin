@@ -6,9 +6,7 @@ pipeline{
                 step{
                     echo "Compiling A========"
                 }
-                step{
-                    echo "Compiling B========"
-                }
+                
                 
             }
             
@@ -18,9 +16,7 @@ pipeline{
                 step{
                     echo "Building a code"
                 }
-                step{
-                    echo "Building b code"
-                }
+               
                 
             }
         }
@@ -29,9 +25,7 @@ pipeline{
                 step{
                   echo "Testing a code"
                 }
-                step{
-                     echo "Testing b code"
-                }
+                
                
             }
         }
@@ -40,9 +34,7 @@ pipeline{
                 step{
                    echo "Deploying a code"
                 }
-               step{
-                    echo "Deploying b code"
-               }
+              
             }
         }
 
