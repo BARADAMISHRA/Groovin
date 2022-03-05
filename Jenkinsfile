@@ -3,22 +3,46 @@ pipeline{
     stages{
         stage("compile"){
             steps{
-                echo "Compiling A========"
+                step{
+                    echo "Compiling A========"
+                }
+                step{
+                    echo "Compiling B========"
+                }
+                
             }
+            
        }
         stage("Building"){
             steps{
-                echo "Building a code"
+                step{
+                    echo "Building a code"
+                }
+                step{
+                    echo "Building b code"
+                }
+                
             }
         }
         stage("Testing"){
             steps{
-                echo "Testing a code"
+                step{
+                  echo "Testing a code"
+                }
+                step{
+                     echo "Testing b code"
+                }
+               
             }
         }
         stage("Deploying"){
             steps{
-                echo "Deploying a code"
+                step{
+                   echo "Deploying a code"
+                }
+               step{
+                    echo "Deploying b code"
+               }
             }
         }
 
