@@ -1,24 +1,13 @@
 pipeline{
-   agent any 
-   stages{
-       stage("build"){
+    agent any
+    stages{
+        stage{
           steps{
-             sh "echo hello world"
-             sh "hostname"
-             sh  "uptime"
-             
-            }
-        }  
-   }
-   post{
-       always{
-           echo "success always block executing"
-       }
-       success{
-           echo  "success block is executing"
-       }
-       failure{
-           echo "Failure block is executing"
-       }
-   }
+              script{
+                  def disk_size=sh(script: "hostname")
+                  println("disk size is ${disk_size}")
+              }
+          }
+        }
+    }
 }
