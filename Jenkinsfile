@@ -8,9 +8,7 @@ pipeline{
                 step{
                     echo " this is 1st time compiling"
                 }
-                step{
-                    echo " this is 2nd time compiling"
-                }
+               
             }
         }
         stage("Building"){
@@ -18,9 +16,7 @@ pipeline{
                 step{
                     echo "this is 1st building phase"
                 }
-                step{
-                    echo "this is 2nd building phase"
-                }
+               
             }
         }
         stage("Testing"){
@@ -28,9 +24,7 @@ pipeline{
                 step{
                     echo " this is my 1st testing phase"
                 }
-                step{
-                    echo "this is my 2nd testing phase"
-                }
+               
             }
         }
         stage("deploying"){
@@ -38,9 +32,7 @@ pipeline{
                 step{
                     echo "this is 1st stage of deploying"
                 }
-                step{
-                    echo "this is 2nd stage of deploying"
-                }
+               
             }
         }
     }
