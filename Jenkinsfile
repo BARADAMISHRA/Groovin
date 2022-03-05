@@ -3,7 +3,7 @@ pipeline{
 
    parameters{
       
-           choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: 'Intresting stuff') 
+    choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: 'Intresting stuff') 
          
    }
 }
