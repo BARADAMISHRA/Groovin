@@ -1,28 +1,12 @@
 pipeline{
-    agent any
+    agent {
+        label 'master'
+    }
     stages{
-        stage("Build"){          
-           steps{
-               echo "build is executing"
-           }
-            }
-        stage("Test"){
-           steps{
-               echo "Test is executing"
-           }
+        stage('build'){
+         steps{
+             echo "Hello world jenkins mishu"
+         }
         }
-        stage("QA"){
-           steps{
-               echo "QA is executing"
-           }
-        }
-        stage("Monitor"){
-           steps{
-               echo "Monitor is executing"
-           }
-        }
-
-        }
-    
-   
+    }
 }
