@@ -1,12 +1,12 @@
 pipeline{
    agent any 
    stages{
-       steps{
+    steps{
            sh "echo hello world"
            sh "hostname"
            sh  "uptime"
            sh "downtime"
-       }
+    }
    }
    post{
        always{
