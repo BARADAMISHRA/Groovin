@@ -1,28 +1,58 @@
 pipeline{
-    agent any
+    agent{
+        label "node"
+    }
     stages{
-        stage("Build"){          
-           steps{
-               echo "build is executing"
-           }
+        stage("compiling"){
+            steps{
+                step{
+                    echo " this is 1st time compiling"
+                }
+                step{
+                    echo " this is 2nd time compiling"
+                }
             }
-        stage("Test"){
-           steps{
-               echo "Test is executing"
-           }
         }
-        stage("QA"){
-           steps{
-               echo "QA is executing"
-           }
+        stage("Building"){
+            steps{
+                step{
+                    echo "this is 1st building phase"
+                }
+                step{
+                    echo "this is 2nd building phase"
+                }
+            }
         }
-        stage("Monitor"){
-           steps{
-               echo "Monitor is executing"
-           }
+        stage("Testing"){
+            steps{
+                step{
+                    echo " this is my 1st testing phase"
+                }
+                step{
+                    echo "this is my 2nd testing phase"
+                }
+            }
         }
-
+        stage("deploying"){
+            steps{
+                step{
+                    echo "this is 1st stage of deploying"
+                }
+                step{
+                    echo "this is 2nd stage of deploying"
+                }
+            }
         }
-    
-   
+    }
+    post{
+        always{
+            echo "========always========"
+        }
+        success{
+            echo "========pipeline executed successfully ========"
+        }
+        failure{
+            echo "========pipeline execution failed========"
+        }
+    }
 }
