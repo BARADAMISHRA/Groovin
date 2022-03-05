@@ -3,7 +3,6 @@ pipeline{
     stages{
         stage("compile"){
             steps{
-                step{
                     echo "Compiling A========"
                 }
                 
@@ -13,7 +12,6 @@ pipeline{
        }
         stage("Building"){
             steps{
-                step{
                     echo "Building a code"
                 }
                
@@ -22,23 +20,22 @@ pipeline{
         }
         stage("Testing"){
             steps{
-                step{
                   echo "Testing a code"
                 }
                 
                
             }
-        }
+        
         stage("Deploying"){
             steps{
-                step{
+                
                    echo "Deploying a code"
-                }
+                
               
             }
         }
 
-    }
+    
     post{
         always{
             echo "========always========"
@@ -50,4 +47,3 @@ pipeline{
             echo "========pipeline execution failed========"
         }
     }
-}
