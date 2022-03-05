@@ -6,7 +6,7 @@ pipeline{
              sh "echo hello world"
              sh "hostname"
              sh  "uptime"
-             sh "downtime"
+             
             }
         }  
    }
