@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        [Example_variable ] = "1"
+        Example_variable  = "1"
     }
     stages{
         stage("enviornment"){
