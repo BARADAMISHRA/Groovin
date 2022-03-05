@@ -1,9 +1,9 @@
 pipeline{
     agent any
-    parameters {
-    choice(
-        name: 'myParameter',
-        choices: "Option1\nOption2",
-        description: 'interesting stuff' )
-  }
+    stages{
+        stage{
+            echo "build number is ${BUILD_NUMBER}"
+            echo "jenkins url is ${JENKINS_URL}"
+        }
+    }
 }
